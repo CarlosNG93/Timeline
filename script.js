@@ -131,4 +131,3 @@ function sendForm() {
   ordenarFecha();
   document.getElementById("form").reset();
 }
-
