@@ -99,16 +99,18 @@ function mostrarZelda(e) {
     const texto = `${zelda.date} (${zelda.title}) ${zelda.text}`;
     
     const date = document.createElement("time");
+    date.textContent = zelda.date;
     nLi.appendChild(date);
     const title = document.createElement("h2");
+    title.textContent = zelda.title;
     nLi.appendChild(title);
     const text = document.createElement("p");
+    text.textContent = zelda.text;
     nLi.appendChild(text);
     const image = document.createElement("img");
     image.src = zelda.image;
     nLi.appendChild(image);
-    const nTexto = document.createTextNode(texto);
-    nLi.appendChild(nTexto);
+    
 
   }
     
