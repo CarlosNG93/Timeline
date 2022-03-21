@@ -91,13 +91,12 @@ function mostrarZelda(e) {
   
   for (const zelda of zeldaTime) {
 
+    /// CREAMOS LA LISTA Y LA SACAMOS
     const nLi = document.createElement('li');
     nUl.appendChild(nLi);
     
 
-    
-    const texto = `${zelda.date} (${zelda.title}) ${zelda.text}`;
-    
+    ////NOMBRAMOS TODAS LAS VARIABLES SEGUN EL HTML Y LAS SACAMOS
     const date = document.createElement("time");
     date.textContent = zelda.date;
     nLi.appendChild(date);
