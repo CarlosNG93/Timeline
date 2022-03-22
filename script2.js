@@ -94,7 +94,11 @@ window.addEventListener("DOMContentLoaded", mostrarZelda);
 
 //FUNCION EN LA QUE AGRUPAMOS TODOS LOS DATOS MEDIANTE BUCLE FOR
 function mostrarZelda(e) {
+  zeldaTime.sort((a, b) => parseFloat(a.date) - parseFloat(b.date));
+
   const nUl = document.querySelector("#eUlZelda");
+
+  nUl.innerHTML = "";
 
   for (const zelda of zeldaTime) {
     const nLi = document.createElement("li");
@@ -117,8 +121,12 @@ function mostrarZelda(e) {
   }
 }
 
-function sendForm() {
+const form = document.getElementById("form");
+console.log(form);
+function sendForm(e) {
+  e.preventDefault();
   const envioFormulario = document.querySelectorAll(".envioFormulario");
+  console.log(envioFormulario[1].value);
 
   const miObj = {
     date: Number(envioFormulario[0].value),
@@ -127,7 +135,9 @@ function sendForm() {
     text: envioFormulario[3].value,
   };
 
-  arr.push(miObj);
-  ordenarFecha();
-  document.getElementById("form").reset();
+  zeldaTime.push(miObj);
+  mostrarZelda();
+  form.reset();
 }
+
+form.addEventListener("submit", sendForm);

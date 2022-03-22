@@ -13,7 +13,7 @@
     <main class="fondo">
       <ul id="eUlZelda"></ul>
     </main>
-    <form id="form" name="Fomulario" onsubmit=" return false">
+    <form id="form" name="Fomulario">
       <label for="">Año</label>
       <input
         type="number"
@@ -24,7 +24,8 @@
 
       <label for="">Titulo</label>
       <input type="text" class="envioFormulario" />
-
+      <label for="">Imagen</label>
+      <input type="url" class="envioFormulario" />
       <label for="">Texto</label>
       <textarea
         name="text"
@@ -34,7 +35,7 @@
         class="envioFormulario"
       ></textarea>
 
-      <button onclick="sendForm()">Enviar</button>
+      <button>Enviar</button>
     </form>
 
     <script src="script2.js"></script>
