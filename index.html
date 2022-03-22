@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timeline</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>Zelda Timeline</header>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Zelda Timeline</h1></header>
 
-    <main>
-        <ul id="eUlZelda">
-            
-        </ul>
+    <main class="fondo">
+      <ul id="eUlZelda"></ul>
     </main>
+    <form id="form" name="Fomulario" onsubmit=" return false">
+      <label for="">Año</label>
+      <input
+        type="number"
+        minlength="4"
+        maxlength="4"
+        class="envioFormulario"
+      />
 
-    <script src="script.js"></script>
-</body>
+      <label for="">Titulo</label>
+      <input type="text" class="envioFormulario" />
+
+      <label for="">Texto</label>
+      <textarea
+        name="text"
+        id=""
+        cols="30"
+        rows="10"
+        class="envioFormulario"
+      ></textarea>
+
+      <button onclick="sendForm()">Enviar</button>
+    </form>
+
+    <script src="script2.js"></script>
+  </body>
 </html>
