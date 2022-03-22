@@ -90,27 +90,20 @@ console.log(zeldaTime);
 
 // UNA VEZ ORDENADOS LE EMPEZAMOS A METER EN EL HTML CADA UNO DE LOS EVENTOS SEGUN LOS DATOS ESPECIFICOS(AÑO, TITULO, IMAGEN Y TEXTO)
 
-<<<<<<< HEAD
-=======
 window.addEventListener("DOMContentLoaded", mostrarZelda);
 
->>>>>>> 617cbecccfc36c8e196bacee10a6dc33143b1a8a
 //FUNCION EN LA QUE AGRUPAMOS TODOS LOS DATOS MEDIANTE BUCLE FOR
 function mostrarZelda(e) {
+  zeldaTime.sort((a, b) => parseFloat(a.date) - parseFloat(b.date));
+
   const nUl = document.querySelector("#eUlZelda");
+
+  nUl.innerHTML = "";
 
   for (const zelda of zeldaTime) {
     const nLi = document.createElement("li");
     nUl.appendChild(nLi);
 
-<<<<<<< HEAD
-    const texto = `${zelda.date} : ${zelda.title}.  ${zelda.text}  ${zelda.image}`;
-    const nTexto = document.createTextNode(texto);
-    nLi.appendChild(nTexto);
-  }
-}
-window.addEventListener("DOMContentLoaded", mostrarZelda);
-=======
     const texto = `${zelda.date} (${zelda.title}) ${zelda.text}`;
 
     const date = document.createElement("time");
@@ -128,8 +121,12 @@ window.addEventListener("DOMContentLoaded", mostrarZelda);
   }
 }
 
-function sendForm() {
+const form = document.getElementById("form");
+console.log(form);
+function sendForm(e) {
+  e.preventDefault();
   const envioFormulario = document.querySelectorAll(".envioFormulario");
+  console.log(envioFormulario[1].value);
 
   const miObj = {
     date: Number(envioFormulario[0].value),
@@ -138,8 +135,9 @@ function sendForm() {
     text: envioFormulario[3].value,
   };
 
-  arr.push(miObj);
-  ordenarFecha();
-  document.getElementById("form").reset();
+  zeldaTime.push(miObj);
+  mostrarZelda();
+  form.reset();
 }
->>>>>>> 617cbecccfc36c8e196bacee10a6dc33143b1a8a
+
+form.addEventListener("submit", sendForm);
