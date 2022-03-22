@@ -114,8 +114,12 @@ function mostrarZelda(e) {
     const image = document.createElement("img");
     image.src = zelda.image;
     nLi.appendChild(image);
+
+    
   }
 }
+console.log(mostrarZelda);
+
 
 function sendForm() {
   const envioFormulario = document.querySelectorAll(".envioFormulario");
@@ -131,3 +135,5 @@ function sendForm() {
   ordenarFecha();
   document.getElementById("form").reset();
 }
+
+console.log(sendForm);
