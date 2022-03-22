@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timeline</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>Zelda Timeline</header>
-
-    <main>
-        <ul id="eUlZelda">
-            
-        </ul>
-
-        <form id="envioFormulario"> 
-            <label for="fecha" id="Elige una fecha:"></label>
-            <input type="date" id="fecha" name="date">
-
-            <label for="titulo" id="Título:"></label>
-            <input type="text" id="titulo" name="title">
-
-            <label for="archivo" id="Selecciona un archivo:"></label>
-            <input type="file" id="archivo" name="file">
-
-            <label for="texto" id="Texto:"></label>
-            <input type="text" id="texto" name="text">
-
-            <button>Enviar</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Zelda Timeline</h1></header>
 
 
+    <main class="fondo">
+      <ul id="eUlZelda"></ul>
 
-        </form>
     </main>
+    <form id="form" name="Fomulario">
+      <label for="">Año</label>
+      <input
+        type="number"
+        minlength="4"
+        maxlength="4"
+        class="envioFormulario"
+      />
+
+      <label for="">Titulo</label>
+      <input type="text" class="envioFormulario" />
+      <label for="">Imagen</label>
+      <input type="url" class="envioFormulario" />
+      <label for="">Texto</label>
+      <textarea
+        name="text"
+        id=""
+        cols="30"
+        rows="10"
+        class="envioFormulario"
+      ></textarea>
+
+      <button>Enviar</button>
+    </form>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

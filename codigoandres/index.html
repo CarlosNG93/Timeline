@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Time Line Zelda</h1>
+    <main>
+      <!-- Aquí van las fichas -->
+      <!-- <article>
+    <h2>Año</h2>
+    <h3>Titulo</h3>
+    <img src="" alt="">
+    <p class="text">Descripcion</p>
+  </article> -->
+    </main>
+
+    <form id="form" name="Fomulario" onsubmit=" return false">
+      <label for="">Año</label>
+      <input
+        type="number"
+        minlength="4"
+        maxlength="4"
+        class="envioFormulario"
+      />
+
+      <label for="">Titulo</label>
+      <input type="text" class="envioFormulario" />
+
+      <label for="">Imagen</label>
+      <input type="image" class="envioFormulario" />
+
+      <label for="">Texto</label>
+      <textarea
+        name="text"
+        id=""
+        cols="30"
+        rows="10"
+        class="envioFormulario"
+      ></textarea>
+
+      <button onclick="sendForm()">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
